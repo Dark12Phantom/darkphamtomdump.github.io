@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Erick Gaceta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e6f25bbc8a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">E</h1>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>I am <span>Erick</span> <br>Gaceta from the Philippines</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+
+        <div class="row">
+            <div class="card1">
+                <h1>About Me</h1>
+                <div class="card__content1">
+                    <p class="card__title1">About Me</p>
+                    <p class="card__description1">
+                        I am a <span>Computer Science</span> student at Baguio
+                        Central University. Still a beginner in terms of actual
+                        software development.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Software Development</span><br>Programming Applications</li>
+                            <li><span>Web Development</span><br>Web Application Development</li>
+                            <li><span>3D Modeling</span><br>Blender Model Creation</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Experience</span><br>Is still under development</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016 - 2020</span><br> High School LNHS</li>
+                            <li><span>2020 - 2022</span><br>STEM - Senior High School LNHS</li>
+                            <li><span>2022 - present</span><br>College (BSCS) BCU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2">
+                <h1>My Services</h1>
+                <div class="card_content2">
+                    <p class="card-title2">My Services</p>
+                    <p class="card-description2">
+
+                    <div class="services-list">
+                        <div class="debugging">
+                            <i class="fa-solid fa-wrench"></i>
+                            <h3>Debugging</h3>
+                            <p>I find and fix errors on previous projects efficiently</p>
+                            <div class="cool-bg"></div>
+                        </div>
+                        <div class="modeling">
+                            <i class="fa-solid fa-cube"></i>
+                            <h3>3D Modeling</h3>
+                            <p>I use Blender to create 3D models</p>
+                            <div class="cool-bg"></div>
+                        </div>
+                        <div class="web">
+                            <i class="fa-solid fa-code"></i>
+                            <h3>Web Development</h3>
+                            <p>I mastered HTML, CSS, and JavaScript for frontend of the website and PHP for the backend
+                            </p>
+                            <div class="cool-bg"></div>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!----------Portfolio----------->
+
+    <div id="portfolio">
+        <div class="portfolio-container">
+            <div class="portsub-title">My Works</div>
+            <p>Works are still under development. Please check back later.</p>
+        </div>
+    </div>
+
+    <!----------Contact------------->
+    <div id="contact">
+        <div class="contact-container">
+            <div class="contact-row">
+                <div class="contact-left">
+                    <h1 class="csub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>gacetaerick124@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-screen"></i>09xx-xxx-xxxx</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-upwork"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>
